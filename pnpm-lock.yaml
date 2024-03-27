@@ -1,0 +1,56 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      fast-check:
+        specifier: ^3.17.0
+        version: 3.17.0
+      typescript:
+        specifier: ^5.4.3
+        version: 5.4.3
+
+  a:
+    dependencies:
+      fast-check:
+        specifier: ^3.17.0
+        version: 3.17.0
+      typescript:
+        specifier: ^5.4.3
+        version: 5.4.3
+
+  b:
+    dependencies:
+      a:
+        specifier: workspace:*
+        version: link:../a
+      fast-check:
+        specifier: ^3.17.0
+        version: 3.17.0
+      typescript:
+        specifier: ^5.4.3
+        version: 5.4.3
+
+packages:
+
+  /fast-check@3.17.0:
+    resolution: {integrity: sha512-9A7UiBENXxMBb40qY+xOcIcGdxF5CYbXJOU4b+omh773RIFcIQRejHEjjrzIHQFLIQXWgWQu3dl6FrWR9VpYRQ==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      pure-rand: 6.1.0
+    dev: false
+
+  /pure-rand@6.1.0:
+    resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
+    dev: false
+
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false
